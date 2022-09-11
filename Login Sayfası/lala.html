@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    
+
+
+<script>
+
+var renk;
+function renkVer() {
+    var a ="ABCDEF0123456789";
+    renk = "#";
+    for(i =0;i<6;i++){
+        var random = Math.round(Math.random()*15);
+        renk += a.charAt(random);
+    }
+}
+
+    setInterval(function () {
+        renkVer();
+
+        document.getElementById("body").style.backgroundColor = renk;
+
+
+    },2000)
+
+
+</script>
+
+
+
+
+</body>
+</html>

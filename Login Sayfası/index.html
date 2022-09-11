@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #boxs {
+        width: 500px;
+        height: 600px;
+        border: 2px solid wheat;
+        margin: auto;
+        margin-top: 85px;
+
+    }
+
+    input {
+        border-radius: 5px;
+        border: none;
+        width: 300px;
+        height: 25px;
+        margin-left: 10px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    p {
+        font-size: 22px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    form {
+        margin-left: 70px;
+        margin-top: 100px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    button {
+        margin-top: 55px;
+        margin-left: 260px;
+        width: 75px;
+        height: 35px;
+        border: none;
+        border-radius: 25px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    h1 {
+        margin-bottom: 25px;
+        margin-top: 95px;
+        font-size: 55px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-left: 145px;
+    }
+
+    #boxs2 {
+        width: 480px;
+        height: 580px;
+        border: 2px solid wheat;
+        margin: auto;
+        margin-top: 8px;
+
+    }
+</style>
+
+<body id="body" style="background-color: blueviolet;">
+
+    <div id="boxs">
+        <div id="boxs2">
+            <h1>LOG İN</h1>
+            <form>
+
+                <label for="kullanıcı">
+                    <p> Kullanıcı Adı:</p>
+                </label> <input id="kullanici" type="text" placeholder="Adınız Lütfen" required="on">
+                <label for="sifre">
+                    <p> Paword:</p>
+                </label><input id="parola" type="password" placeholder="Şifreniz Lütfen" required="on">
+                <br>
+                <button onclick="girisOnay()" id="btn">Giriş</button>
+
+
+            </form>
+        </div>
+
+    </div>
+
+
+    <script>
+        //Arka PLan renk Değişim Kodları 
+        var renk;
+        function renkVer() {
+            var a = "ABCDEF123456789";
+            renk = "#";
+            for (i = 0; i < 6; i++) {
+                var random = Math.round(Math.random() * 15);
+                renk += a.charAt(random);
+            }
+        }
+        setInterval(function () {
+            renkVer();
+            document.getElementById("body").style.backgroundColor = renk;
+        }, 2000)
+
+        //Login Giriş Kontrol Kodları 
+
+        var kullanicilar = [{ kullaniciAd: "admin", parola: "adminler" },
+        { kullaniciAd: "recep", parola: "1234" }, { kullaniciAd: "ahmet", parola: "12345" }];
+
+        var girilenKullaniciAdi;
+        var girilenParola;
+        var x;
+
+        function kontrol() {
+
+            girilenKullaniciAdi = document.getElementById("kullanici").value;
+            girilenParola = document.getElementById("parola").value;
+
+            for (x of kullanicilar) {
+                if ((x.kullaniciAd == girilenKullaniciAdi) && (x.parola == girilenParola)) {
+                    return true;
+                }
+            };
+
+        }
+
+        function girisOnay() {
+
+            kontrol();
+
+
+            if (kontrol()) {
+
+                window.open("lala.html","_terget");
+
+
+            } else {
+
+                alert("Giriş Başarısız");
+
+
+            }
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
