@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: blueviolet;
+    }
+
+    #saat {
+        color: wheat;
+        width: 150px;
+        height: 150px;
+        border-bottom: 1px solid wheat;
+        float: left;
+        margin-left: 12px;
+        font-size: 120px;
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #dakika {
+        color: wheat;
+        width: 150px;
+        height: 150px;
+        border-bottom: 1px solid wheat;
+        float: left;
+        margin-left: 12px;
+        font-size: 120px;
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #saniye {
+        color: wheat;
+        width: 150px;
+        height: 150px;
+        border-bottom: 1px solid wheat;
+        float: left;
+        margin-left: 12px;
+        font-size: 120px;
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #div1 {
+        margin-top: 360px;
+        margin-left: 700px;
+    }
+</style>
+
+<body>
+
+
+    <div id="div1">
+        <div id="saat">
+            
+        </div>
+        <div id="dakika">
+
+        </div>
+        <div id="saniye">
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+
+        var date = new Date();
+
+
+
+
+        var saat, dakika, saniye;
+
+        saat = date.getHours();
+        dakika = date.getMinutes();
+        saniye = date.getSeconds();
+
+
+
+        setInterval(function () {
+
+
+            document.getElementById("saat").innerHTML = saat +":";
+            document.getElementById("dakika").innerHTML = dakika +":";
+            document.getElementById("saniye").innerHTML = saniye;
+
+            saniye++;
+
+            if (Number(document.getElementById("saniye").innerText) == 59) {
+                saniye = 0;
+                dakika++;
+            }
+            if (Number(document.getElementById("dakika").innerText) > 59) {
+                dakika = 0;
+                saat++;
+            }
+            if (Number(document.getElementById("saat").innerText) > 23) {
+                saat = 0;
+                dakika = 0;
+            }
+
+
+
+        }, 1000)
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
