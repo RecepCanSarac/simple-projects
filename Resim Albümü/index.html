@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.min.js"></script>
+    <title>Albüm</title>
+    <style>
+        .c1 {
+            width: 250px;
+            height: 250px;
+            float: left;
+            margin-left: 100px;
+            margin-bottom: 55px;
+
+        }
+
+        #div1 {
+            clear: left;
+            width: 1250px;
+            height: 500px;
+            background-color: gray;
+            margin: auto;
+            display: none;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <img src="resim1.jpg" alt="" class="c1" id="resim1">
+    <img src="resim2.jpg" alt="" class="c1" id="resim2">
+    <img src="resim3.jpg" alt="" class="c1" id="resim3">
+    <img src="resim4.jpg" alt="" class="c1" id="resim4">
+    <img src="resim5.jpg" alt="" class="c1" id="resim5">
+
+    <div id="div1"></div>
+
+
+    <script>
+
+        $(function () {
+
+            $("#resim1").mouseover(function () {
+
+                $("#div1").fadeIn(2000).css("background-image", "url(resim1.jpg)");
+                $("#div1").show();
+
+
+            });
+            $("#resim1").mouseleave(function () {
+
+
+                $("#div1").hide();
+
+
+            });
+            $("#resim2").mouseover(function () {
+
+                $("#div1").fadeIn(2000).css("background-image", "url(resim2.jpg)");
+                $("#div1").show();
+
+
+            });
+            $("#resim2").mouseleave(function () {
+
+
+                $("#div1").hide();
+
+
+            });
+            $("#resim3").mouseover(function () {
+
+                $("#div1").fadeIn(2000).css("background-image", "url(resim3.jpg)");
+                $("#div1").show();
+
+
+            });
+            $("#resim3").mouseleave(function () {
+
+
+                $("#div1").hide();
+
+
+            });
+            $("#resim4").mouseover(function () {
+
+                $("#div1").fadeIn(2000).css("background-image", "url(resim4.jpg)");
+                $("#div1").show();
+
+
+            });
+            $("#resim4").mouseleave(function () {
+
+
+                $("#div1").hide();
+
+
+            });
+            $("#resim5").mouseover(function () {
+
+                $("#div1").fadeIn(2000).css("background-image", "url(resim5.jpg)");
+                $("#div1").show();
+
+
+            });
+            $("#resim5").mouseleave(function () {
+
+
+                $("#div1").hide();
+
+
+            });
+        });
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
