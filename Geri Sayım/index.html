@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: blueviolet;
+    }
+
+    #saat {
+        color: wheat;
+        width: 150px;
+        height: 150px;
+        border-bottom: 1px solid wheat;
+        float: left;
+        margin-left: 12px;
+        font-size: 120px;
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #dakika {
+        color: wheat;
+        width: 150px;
+        height: 150px;
+        border-bottom: 1px solid wheat;
+        float: left;
+        margin-left: 12px;
+        font-size: 120px;
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #saniye {
+        color: wheat;
+        width: 150px;
+        height: 150px;
+        border-bottom: 1px solid wheat;
+        float: left;
+        margin-left: 12px;
+        font-size: 120px;
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #div1 {
+        margin-top: 360px;
+        margin-left: 700px;
+    }
+</style>
+
+<body>
+
+
+    <div id="div1">
+        <div id="saat">
+
+        </div>
+        <div id="dakika">
+
+        </div>
+        <div id="saniye">
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        var saat = prompt("Saat Giriniz: ", 0);
+        var dakika = prompt("dakika Giriniz:", 0);
+        var saniye = prompt("saniye Giriniz:", 10);
+
+        var a = setInterval(function () {
+
+
+            document.getElementById("saat").innerHTML = saat;
+            document.getElementById("dakika").innerHTML = dakika;
+            document.getElementById("saniye").innerHTML = saniye--;
+
+            if (Number(document.getElementById("saniye").innerText) == 0) {
+                dakika--;
+                saniye = 59;
+            }
+            if (Number(document.getElementById("dakika").innerText) == 0 && Number(document.getElementById("saniye").innerText) == 0) {
+                dakika = 59;
+                saat--;
+            } if (Number(document.getElementById("saat").innerText) == 0 && Number(document.getElementById("dakika").innerText) == 0 && Number(document.getElementById("saniye").innerText) == 0) {
+                document.getElementById("saat").style.color = "red";
+                document.getElementById("dakika").style.color = "red";
+                document.getElementById("saniye").style.color = "red";
+                document.getElementById("saat").style.borderBottomColor = "red";
+                document.getElementById("dakika").style.borderBottomColor = "red";
+                document.getElementById("saniye").style.borderBottomColor = "red";
+                clearInterval(a);
+
+            }
+
+
+
+
+        }, 1000)
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
