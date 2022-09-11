@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.min.js"></script>
+    <title>Duyarlı Navbar</title>
+</head>
+<style>
+    body {
+        margin: auto;
+    }
+
+    #div1 {
+        width: 50%;
+        height: 125px;
+        background-color: white;
+        margin: auto;
+
+    }
+
+    h1 {
+        color: gray;
+        float: left;
+        margin-top: 50px;
+        margin-left: 15px;
+    }
+
+    #btn {
+        float: left;
+        margin-left: 60%;
+        margin-top: 50px;
+    }
+
+    #div2 {
+        width: 50%;
+        height: 300px;
+        background-color: white;
+        box-sizing: border-box;
+        padding-top: 25px;
+        display: none;
+        margin: auto;
+        position: absolute;
+        left: 480px;
+    }
+
+    .c1 {
+        font-size: 25px;
+        margin: 55px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .c1:hover {
+        color: antiquewhite;
+    }
+
+    p {
+        text-align: center;
+        width: 50%;
+        margin-left: 470px;
+    }
+</style>
+
+<body>
+    <div id="div1">
+        <h1>DUYARLI NAVBAR</h1>
+        <input id="btn" type="image" src="button.png" value="submit" width="50px">
+    </div>
+    <div id="div2">
+        <div id="links">
+            <a href="#" class="c1">Ana Sayfa</a><br><br><br>
+            <a href="#" class="c1">Hakkımızda</a><br><br><br>
+            <a href="#" class="c1">Albüm</a><br><br><br>
+            <a href="#" class="c1">İletişim</a>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                $("#div2").slideToggle(1000);
+            });
+        });
+    </script>
+</body>
+
+</html>
