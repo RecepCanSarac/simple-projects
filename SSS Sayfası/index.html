@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(118, 228, 182);
+    }
+
+    #div1 {
+        width: 100%;
+        height: 1050px;
+    }
+
+    .soru {
+        width: 60%;
+        height: 75px;
+        background-color: aliceblue;
+        margin: auto;
+        margin-top: 25px;
+        font-size: 22px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: rgb(236, 195, 118);
+        border-radius: 15px 15px 0px 0px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 55px;
+        margin-bottom: 55px;
+        color: rgb(216, 160, 87);
+    }
+
+    .soru p {
+        margin-left: 55px;
+        float: left;
+
+    }
+
+    button {
+        float: left;
+        margin-left: 750px;
+        margin-top: 25px;
+        background-color: aliceblue;
+        border-color: rgb(236, 195, 118);
+        color: rgb(236, 195, 118);
+    }
+
+    #btn2 {
+        margin-left: 660px;
+        border-color: rgb(236, 195, 118);
+        color: rgb(236, 195, 118);
+    }
+
+    #btn3 {
+        margin-left: 1011px;
+        margin-top: -52px;
+    }
+
+    .cevap {
+        width: 60%;
+        height: 175px;
+        margin-left: 378px;
+        background-color: aliceblue;
+        font-size: 22px;
+        color: rgb(236, 195, 118);
+        line-height: 25px;
+        padding-top: 25px;
+        padding-left: 22px;
+        padding-right: 22px;
+        box-sizing: border-box;
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="div1">
+        <h1>SIKÇA SORULAN SORULAR</h1>
+        <div id="soru1" class="soru">
+            <p>Ürününüz Orjinalmidir</p>
+            <button id="btn1">+</button>
+        </div>
+        <div id="cevap1" class="cevap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, perferendis
+            iste. Voluptate aspernatur facere cupiditate non dolores est? Cumque voluptate enim iusto facilis aliquam a
+            natus tempore quae dolor quidem!</div>
+        <div id="soru2" class="soru">
+            <p> Ürünü Eve Teslim Ediyormusunuz </p>
+            <button id="btn2">+</button>
+        </div>
+        <div id="cevap2" class="cevap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque fugit, dolore
+            distinctio at, amet eaque explicabo nam, deleniti quam impedit dolorum minus eius corrupti velit. Ab libero
+            similique molestiae officia?</div>
+        <div id="soru3" class="soru">
+            <p>Paketleme İçin Hangi Yöntemi Kullanıyorsunuz</p>
+            <button id="btn3">+</button>
+        </div>
+        <div id="cevap3" class="cevap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+            perspiciatis praesentium sequi autem aut esse mollitia expedita reiciendis tempore qui nostrum, sint
+            incidunt amet cumque unde rerum ullam doloribus eveniet.</div>
+    </div>
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                $("#cevap1").slideToggle(1000);
+            });
+            $("#btn2").click(function () {
+                $("#cevap2").slideToggle(1000);
+            });
+            $("#btn3").click(function () {
+                $("#cevap3").slideToggle(1000);
+            });
+        });
+    </script>
+</body>
+
+</html>
