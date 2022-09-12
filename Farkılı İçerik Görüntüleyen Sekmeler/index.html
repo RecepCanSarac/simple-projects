@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    #container {
+        width: 1000px;
+        height: 280px;
+        margin: auto;
+        margin-top: 100px;
+        border-radius: 12px;
+        box-shadow: 2px 2px 5px 0px rgb(118, 118, 230);
+    }
+
+    img {
+        margin: auto;
+        margin-top: 35px;
+        margin-left: 25px;
+        border-radius: 25px;
+        box-shadow: 1px 0px 2px 0px black;
+        float: left;
+        margin-right: 25px;
+    }
+
+    .btn {
+        float: left;
+        margin-left: 45px;
+        width: 100px;
+        margin-top: 25px;
+        background-color: #fff;
+        border: none;
+        height: 25px;
+        margin-bottom: 10px;
+    }
+
+    #btn1 {
+        background-color: rgb(118, 118, 230);
+        border-radius: 15px;
+    }
+
+    #btn2 {
+
+        border-radius: 15px;
+    }
+
+    #btn3 {
+        border-radius: 15px;
+    }
+
+    .icerik {
+        font-size: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-right: 30px;
+
+    }
+
+    #icerik2 {
+        display: none;
+    }
+
+    #icerik3 {
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="container">
+
+        <div id="resim">
+            <img width="450px" height="200px" src="manzara.jpg" alt="resim">
+        </div>
+        <div id="kutular">
+            <div>
+                <button id="btn1" class="btn">HTML</button>
+                <button id="btn2" class="btn">CSS</button>
+                <button id="btn3" class="btn">JAVASCRİPT</button>
+                <div id="icerik1" class="icerik">
+                    HTML, bir programlama dili olarak tanımlanamaz. Zira HTML kodlarıyla kendi başına çalışan bir
+                    program yazılamaz. Ancak bu dili yorumlayabilen programlar aracılığıyla çalışabilen programlar
+                    yazılabilir. Programlama dili denilememesinin nedeni tam olarak budur.
+                </div>
+                <div id="icerik2" class="icerik">
+                    CSS, (Cascading Style Sheets) yani, basamaklı stil şablonları anlamına gelmektedir. CSS bir
+                    biçimlendirme dilidir. Web site sayfalarını kendi stil kurallarına göre şekillendirebilme olanağı
+                    verir. Kendine özgü kuralları bulunan CSS, javascript ve HTML ile üst düzey web sayfaları
+                    hazırlanabilir.
+                </div>
+                <div id="icerik3" class="icerik">
+                    JavaScript, yaygın olarak web tarayıcılarında kullanılmakta olan dinamik bir programlama dilidir.
+                    JavaScript ile yazılan istemci tarafı betikler sayesinde tarayıcının kullanıcıyla etkileşimde
+                    bulunması, tarayıcının kontrol edilmesi, asenkron bir şekilde sunucu ile iletişime geçilmesi ve web
+                    sayfası içeriğinin değiştirilmesi gibi işlevler sağlanır.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        $(function () {
+            $("#btn1").click(function () {
+                $(this).css("background-color", " rgb(118, 118, 230)");
+                $("#btn2").css("background-color", "white");
+                $("#btn3").css("background-color", "white");
+                $("#icerik1").show();
+                $("#icerik2").hide();
+                $("#icerik3").hide();
+
+            });
+            $("#btn2").click(function () {
+                $(this).css("background-color", " rgb(118, 118, 230)");
+                $("#btn1").css("background-color", "white");
+                $("#btn3").css("background-color", "white");
+                $("#icerik1").hide();
+                $("#icerik2").show();
+                $("#icerik3").hide();
+            });
+            $("#btn3").click(function () {
+                $(this).css("background-color", " rgb(118, 118, 230)");
+                $("#btn2").css("background-color", "white");
+                $("#btn1").css("background-color", "white");
+                $("#icerik1").hide();
+                $("#icerik2").hide();
+                $("#icerik3").show();
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
