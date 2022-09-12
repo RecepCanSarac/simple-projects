@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 50%;
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 0px;
+        height: 75px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<body>
+    <h3 style="margin-left: 25px;font-size: 25px;">ARAYINIZ</h3>
+    <input style="width: 325px;height: 25px;margin-bottom: 25px;" id="ara" type="text">
+
+
+    <table id="liste">
+        <thead>
+            <tr>
+                <th>İsim</th>
+                <th>Soyisim</th>
+                <th>Telefon</th>
+                <th>E-mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ahmet</td>
+                <td>Saraç</td>
+                <td>0111111111</td>
+                <td>ahmetsarac@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Recep Can</td>
+                <td>Saraç</td>
+                <td>022222222222</td>
+                <td>recepcansarac@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Yusuf</td>
+                <td>Arslan</td>
+                <td>0333333333333</td>
+                <td>yusufarslan@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Metin</td>
+                <td>Akyol</td>
+                <td>04444444444444</td>
+                <td>metinakyol@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Berat</td>
+                <td>Yokyol</td>
+                <td>0555555555555555555</td>
+                <td>Beratyokyol@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Arzu</td>
+                <td>Arzuoğlu</td>
+                <td>066666666666666</td>
+                <td>arzuarzuoğlu@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Havva</td>
+                <td>Vicdan</td>
+                <td>077777777777777</td>
+                <td>havvavicdan@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Aykut</td>
+                <td>Elmas</td>
+                <td>08888888888888</td>
+                <td>aykutelmas@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Hüseyin</td>
+                <td>Ölmez</td>
+                <td>09999999999999</td>
+                <td>hüseyinolmez@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Recep Tayyip</td>
+                <td>Erdoğan</td>
+                <td>100056512321</td>
+                <td>rte@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script>
+
+        $(function () {
+
+            $("#ara").keyup(function () {
+
+                var deger = $(this).val().toLowerCase();
+                $("#liste tr").filter(function () {
+
+
+                    $(this).toggle($(this).text().toLowerCase().indexOf(deger) > -1
+                    );
+
+
+                });
+
+
+
+
+
+            });
+
+
+
+
+
+        });
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
